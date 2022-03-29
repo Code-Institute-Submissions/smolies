@@ -1,4 +1,4 @@
-# Smolies - 90s style pet game 
+#Smolies - 90s style pet game 
 
 from random import randrange
 
@@ -16,6 +16,9 @@ class Pet(object):
     vocab = ['"Grr..."']
 
     def __init__(self, name, pet_type):
+        """
+        Create pet's initial functions
+        """
         self.name = name
         self.pet_type = pet_type
         self.food = randrange(self.food_max)
@@ -23,14 +26,24 @@ class Pet(object):
         self.vocab = self.vocab[:]
 
     def __clock_tick(self):
+        """
+        Create time passing that affects pet's fun and food levels
+        """
         self.fun -= 1
         self.food -= 1
 
     @property
     def mood(self):
+        """
+        Create pet's default mood based on fun and food levels
+        """
         if self.food > self.food_warning and self.fun > self.fun_warning:
             return "happy"
         elif self.food < self.food_warning:
             return "hungry"
         else:
             return "sad"
+
+
+    def __str__(self):
+
