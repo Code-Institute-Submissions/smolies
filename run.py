@@ -57,6 +57,9 @@ class Pet(object):
         self.__clock_tick()
 
     def talk(self):
+        """
+        Create a function that allows the pet to talk about themselves - overview for the player
+        """
         print("I am a ",
         self.pet_type,
         " named ",
