@@ -1,6 +1,7 @@
-#Smolies - 90s style pet game 
+#Smolies - 90s style pet game
 
 from random import randrange
+
 
 class Pet(object):
     """
@@ -45,7 +46,8 @@ class Pet(object):
 
     def __str__(self):
         """
-        Create string that pops the first message in console based on player's name choice and pet's mood
+        Create string that pops the first message in console
+        based on player's name choice and pet's mood
         """
         return "\nI'm " + self.name + "." + "\nI feel " + self.mood() + "."
 
@@ -58,21 +60,14 @@ class Pet(object):
 
     def talk(self):
         """
-        Create a function that allows the pet to talk about themselves - overview for the player
+        Create a function that allows the pet to talk about themselves
+        - overview for the player
         """
-        print("I am a ",
-        self.pet_type,
-        " named ",
-        self.name,
-        ".",
-        "I feel ",
-        self.mood(),
-        "now.\n"
-        )
-
+        print("I am a " + self.pet_type + " named " + self.name + ".\n"
+        "I feel " + self.mood() + "now.\n")
         self.__clock_tick()
 
-    def  feed(self):
+    def feed(self):
         """
         Create a function that determines the food level during feeding
         """
@@ -80,7 +75,7 @@ class Pet(object):
         meal = randrange(self.food, self.food_max)
         self.food += meal
 
-        if self.food < 0: 
+        if self.food < 0:
             self.food = 0
             print("I am SOOO hungry!")
         elif self.food > self.food_max:
@@ -102,4 +97,3 @@ class Pet(object):
             self.fun = self.fun_max
             print("I'm so happy!")
         self.__clock_tick()
-
