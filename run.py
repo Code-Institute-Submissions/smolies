@@ -72,4 +72,34 @@ class Pet(object):
 
         self.__clock_tick()
 
-    def 
+    def  feed(self):
+        """
+        Create a function that determines the food level during feeding
+        """
+        print("Munch, munch...\n Yummm! Thank you!")
+        meal = randrange(self.food, self.food_max)
+        self.food += meal
+
+        if self.food < 0: 
+            self.food = 0
+            print("I am SOOO hungry!")
+        elif self.food > self.food_max:
+            self.food = self.food_max
+            print("My belly is full!")
+        self.__clock_tick()
+
+    def play(self):
+        """
+        Create a function that determines the joy level during playing
+        """
+        print("Wohooo!")
+        joy = randrange(self.fun, self.fun_max)
+        self.fun += joy
+        if self.fun < 0:
+            self.fun = 0
+            print("I'm sad!")
+        elif self.fun > self.fun_max:
+            self.fun = self.fun_max
+            print("I'm so happy!")
+        self.__clock_tick()
+
