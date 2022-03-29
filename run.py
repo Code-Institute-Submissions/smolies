@@ -46,4 +46,9 @@ class Pet(object):
 
 
     def __str__(self):
+        """
+        Create string that pops the first message in console based on player's name choice and pet's mood
+        """
+        return "\n I'm " + self.name + "." + "\n I feel " + self.mood() + "."
+
 
