@@ -32,7 +32,6 @@ class Pet(object):
         self.fun -= 1
         self.food -= 1
 
-    @property
     def mood(self):
         """
         Create pet's default mood based on fun and food levels
@@ -65,7 +64,7 @@ class Pet(object):
         """
         print(
             "I am a " + self.pet_type + " named " + self.name + ".\n" + 
-            "I feel " + self.mood() + "now.\n"
+            "I feel " + self.mood() + " now.\n"
         )
         self.__clock_tick()
 
