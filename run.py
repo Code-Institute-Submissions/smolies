@@ -63,7 +63,7 @@ class Pet(object):
         - overview for the player
         """
         print(
-            "I am a " + self.pet_type + " named " + self.name + ".\n" + 
+            "I am a " + self.pet_type + " named " + self.name + ".\n" +
             "I feel " + self.mood() + " now.\n"
         )
 
@@ -104,6 +104,9 @@ class Pet(object):
 
 
 def main():
+    """
+    Main game function
+    """
     pet_name = input("I'm your new pet. What's my name? ")
     pet_type = input("What type of animal am I? ")
 
@@ -142,5 +145,6 @@ def main():
             my_pet.play()
         else:
             print("Sorry, can't do that! Try a different option. ")
+
 
 main()
