@@ -82,7 +82,7 @@ class Pet(object):
         if self.food < 0:
             self.food = 0
             print("I am SOOO hungry!")
-        elif self.food > self.food_max:
+        elif self.food >= self.food_max:
             self.food = self.food_max
             print("My belly is full!")
         self.__clock_tick()
@@ -91,15 +91,15 @@ class Pet(object):
         """
         Create a function that determines the joy level during playing
         """
-        print("Wohooo!")
+        print("Playing together is really fun!")
         joy = randrange(self.fun, self.fun_max)
         self.fun += joy
         if self.fun < 0:
             self.fun = 0
             print("I'm sad!")
-        elif self.fun > self.fun_max:
+        elif self.fun >= self.fun_max:
             self.fun = self.fun_max
-            print("I'm so happy!")
+            print("I'm sooo happy!")
         self.__clock_tick()
 
 
