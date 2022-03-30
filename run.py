@@ -63,8 +63,10 @@ class Pet(object):
         Create a function that allows the pet to talk about themselves
         - overview for the player
         """
-        print("I am a " + self.pet_type + " named " + self.name + ".\n"
-        "I feel " + self.mood() + "now.\n")
+        print(
+            "I am a " + self.pet_type + " named " + self.name + ".\n" + 
+            "I feel " + self.mood() + "now.\n"
+        )
         self.__clock_tick()
 
     def feed(self):
@@ -97,3 +99,43 @@ class Pet(object):
             self.fun = self.fun_max
             print("I'm so happy!")
         self.__clock_tick()
+
+
+def main():
+    pet_name = input("I'm your new pet. What's my name? ")
+    pet_type = input("What type of animal am I? ")
+
+    # Create a new pet
+    my_pet = Pet(pet_name, pet_type)
+
+    input("Hello! I am " + my_pet.name + "." + "\nPress enter to start. ")
+
+    choice = None
+
+    while choice != 0:
+        print(
+            """
+            *** INTERACT WITH YOUR PET ***
+
+            1 - Feed your pet
+            2 - Talk with your pet
+            3 - Teach your pet some new words
+            4 - Play with your pet
+            0 - Quit the game
+            """
+        )
+
+        if choice == "0":
+            print("See you next time!")
+        elif choice == "1":
+            my_pet.feed()
+        elif choice == "2":
+            my_pet.talk()
+        elif choice == "3":
+            new_word = input("What word would you like me to learn? ")
+            my_pet.teach(new_word)
+        elif choice == "4":
+            my_pet.play()
+        else:
+            print("Sorry, can't do that! Try a different option. ")
+
