@@ -108,7 +108,7 @@ def main():
     # Create a new pet
     my_pet = Pet(pet_name, pet_type)
 
-    input("Hello! I am " + my_pet.name + "." + "\nPress enter to start. ")
+    input("Hello! I'm " + my_pet.name + ", your new pet!" + "\nPress enter to start. ")
 
     choice = None
 
@@ -125,6 +125,8 @@ def main():
             """
         )
 
+        choice = input("Choice: ")
+
         if choice == "0":
             print("See you next time!")
         elif choice == "1":
@@ -139,3 +141,4 @@ def main():
         else:
             print("Sorry, can't do that! Try a different option. ")
 
+main()
