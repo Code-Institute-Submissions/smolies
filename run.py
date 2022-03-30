@@ -66,6 +66,9 @@ class Pet(object):
             "I am a " + self.pet_type + " named " + self.name + ".\n" + 
             "I feel " + self.mood() + " now.\n"
         )
+
+        print(self.vocab[randrange(len(self.vocab))])
+
         self.__clock_tick()
 
     def feed(self):
