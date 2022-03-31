@@ -1,6 +1,6 @@
 #Smolies - 90s style pet game
-
 from random import randrange
+import pyfiglet
 
 
 class Pet(object):
@@ -113,11 +113,12 @@ def main():
     # Create a new pet
     my_pet = Pet(pet_name, pet_type)
 
-    input("Hello! I'm " + my_pet.name + ", your new pet!" + "\nPress enter to start. ")
+    input("\nHello! I'm " + my_pet.name + ", your new pet!" + "\nPress enter to start. ")
 
     choice = None
 
     while choice != 0:
+        print(pyfiglet.figlet_format("Smolies - pet game", width = 200))
         print(
             """
             *** INTERACT WITH YOUR PET ***
@@ -127,6 +128,8 @@ def main():
             3 - Teach your pet some new words
             4 - Play with your pet
             0 - Quit the game
+
+            ******************************
             """
         )
 
@@ -134,6 +137,7 @@ def main():
 
         if choice == "0":
             print("See you next time!")
+            exit()
         elif choice == "1":
             my_pet.feed()
         elif choice == "2":
