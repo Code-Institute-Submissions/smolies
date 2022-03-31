@@ -1,4 +1,4 @@
-#Smolies - 90s style pet game
+# Smolies - 90s style pet game
 from random import randrange
 import pyfiglet
 from termcolor import colored
@@ -68,7 +68,7 @@ class Pet(object):
             "I feel " + self.mood() + " now.\n"
         )
 
-        print("I can say now: " + self.vocab[randrange(len(self.vocab))])
+        print("I know how to say: " + self.vocab[randrange(len(self.vocab))])
 
         self.__clock_tick()
 
@@ -114,7 +114,8 @@ def main():
     # Create a new pet
     my_pet = Pet(pet_name, pet_type)
 
-    input("\nHello! I'm " + my_pet.name + ", your new pet!" + "\nPress enter to start. ")
+    input("\nHello! I'm " + my_pet.name + ", your new pet!"
+        + "\nPress enter to start. ")
     print(colored(pyfiglet.figlet_format("Smolies - pet game", width = 200,), 'green'))
 
     choice = None
