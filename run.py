@@ -1,13 +1,14 @@
 #Smolies - 90s style pet game
 from random import randrange
 import pyfiglet
+from termcolor import colored
 
 
 class Pet(object):
     """
     Create a default pet abilities
     """
-    fun_reduce = 3
+    fun_reduce = 2
     fun_max = 10
     fun_warning = 3
     food_reduce = 2
@@ -67,7 +68,7 @@ class Pet(object):
             "I feel " + self.mood() + " now.\n"
         )
 
-        print(self.vocab[randrange(len(self.vocab))])
+        print("I can say now: " + self.vocab[randrange(len(self.vocab))])
 
         self.__clock_tick()
 
@@ -114,12 +115,12 @@ def main():
     my_pet = Pet(pet_name, pet_type)
 
     input("\nHello! I'm " + my_pet.name + ", your new pet!" + "\nPress enter to start. ")
+    print(colored(pyfiglet.figlet_format("Smolies - pet game", width = 200,), 'green'))
 
     choice = None
 
     while choice != 0:
-        print(pyfiglet.figlet_format("Smolies - pet game", width = 200))
-        print(
+        print(colored(
             """
             *** INTERACT WITH YOUR PET ***
 
@@ -130,8 +131,8 @@ def main():
             0 - Quit the game
 
             ******************************
-            """
-        )
+            """, 'yellow'
+        ))
 
         choice = input("Choice: ")
 
@@ -143,7 +144,7 @@ def main():
         elif choice == "2":
             my_pet.talk()
         elif choice == "3":
-            new_word = input("What word would you like me to learn? ")
+            new_word = input("What would you like me to learn? ")
             my_pet.teach(new_word)
         elif choice == "4":
             my_pet.play()
