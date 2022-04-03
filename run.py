@@ -1,156 +1,148 @@
-# Smolies - 90s style pet game
-from random import randrange
 import pyfiglet
 from termcolor import colored
 
+# pet dictionary
+pet = {"name": "", "type": "", "age": 0, "hunger": 0, "toys": []}
 
-class Pet(object):
-    """
-    Create a default pet abilities
-    """
-    fun_reduce = 2
-    fun_max = 10
-    fun_warning = 3
-    food_reduce = 2
-    food_max = 10
-    food_warning = 3
-    vocab = ['"Grr..."']
+# pet toys data object
+petToys = {"cat": ["cardboard box", "scratcher a.k.a your favorite chair", "laser pointer"], "dog": ["your new pair of shoes", "stick... just a stick", "annoying squeeky toy"], 
+"hamster": ["rainbow bridge", "climbing ladder", "super fast spinning wheel"], "fish": ["pirate's treasure chest", "undersea cave", "fluorescent non-toxic plants"], 
+"bird": ["luxurious bathtub bowl", "wooden playground", "cute swing"]}
 
-    def __init__(self, name, pet_type):
-        """
-        Create pet's initial functions
-        """
-        self.name = name
-        self.pet_type = pet_type
-        self.food = randrange(self.food_max)
-        self.fun = randrange(self.fun_max)
-        self.vocab = self.vocab[:]
-
-    def __clock_tick(self):
-        """
-        Create time passing that affects pet's fun and food levels
-        """
-        self.fun -= 1
-        self.food -= 1
-
-    def mood(self):
-        """
-        Create pet's default mood based on fun and food levels
-        """
-        if self.food > self.food_warning and self.fun > self.fun_warning:
-            return "happy"
-        elif self.food < self.food_warning:
-            return "hungry"
-        else:
-            return "sad"
-
-    def __str__(self):
-        """
-        Create string that pops the first message in console
-        based on player's name choice and pet's mood
-        """
-        return "\nI'm " + self.name + "." + "\nI feel " + self.mood() + "."
-
-    def teach(self, word):
-        """
-        Create a function that teaches the pet new words
-        """
-        self.vocab.append(word)
-        self.__clock_tick()
-
-    def talk(self):
-        """
-        Create a function that allows the pet to talk about themselves
-        - overview for the player
-        """
-        print(
-            "I am a " + self.pet_type + " named " + self.name + ".\n" +
-            "I feel " + self.mood() + " now.\n"
-        )
-
-        print("I know how to say: " + self.vocab[randrange(len(self.vocab))])
-
-        self.__clock_tick()
-
-    def feed(self):
-        """
-        Create a function that determines the food level during feeding
-        """
-        print("Munch, munch...\n Yummm! Thank you!")
-        meal = randrange(self.food, self.food_max)
-        self.food += meal
-
-        if self.food < 0:
-            self.food = 0
-            print("I am SOOO hungry!")
-        elif self.food >= self.food_max:
-            self.food = self.food_max
-            print("My belly is full!")
-        self.__clock_tick()
-
-    def play(self):
-        """
-        Create a function that determines the joy level during playing
-        """
-        print("Playing together is really fun!")
-        joy = randrange(self.fun, self.fun_max)
-        self.fun += joy
-        if self.fun < 0:
-            self.fun = 0
-            print("I'm sad!")
-        elif self.fun >= self.fun_max:
-            self.fun = self.fun_max
-            print("I'm sooo happy!")
-        self.__clock_tick()
-
-
-def main():
-    """
-    Main game function
-    """
-    pet_name = input("I'm your new pet. What's my name? ")
-    pet_type = input("What type of animal am I? ")
-
-    # Create a new pet
-    my_pet = Pet(pet_name, pet_type)
-
-    input("\nHello! I'm " + my_pet.name + ", your new pet!"
-        + "\nPress enter to start. ")
+# Prompt for different options of pet type
+def createPet():
     print(colored(pyfiglet.figlet_format("Smolies - pet game", width = 200,), 'green'))
+    # get the input of what type of pet is this
+    petType = ""
 
-    choice = None
+    petOptions = list(petToys.keys())
+    # validate the input
+    while petType not in petOptions:
+        print("Hello! In this game you can choose one of the following pets: \n")
+        for option in petOptions:
+            print(option)
+        petType = input("\nI bet you're excited! Which pet did you choose? ").lower()
 
-    while choice != 0:
-        print(colored(
-            """
-            *** INTERACT WITH YOUR PET ***
+    # write the pet type into the database
+    pet["type"] = petType
 
-            1 - Feed your pet
-            2 - Talk with your pet
-            3 - Teach your pet some new words
-            4 - Play with your pet
-            0 - Quit the game
+    # name the pet
+    pet["name"] = input("Okay, one more question... What's the name of your " + pet["type"] + "? ")
+    while not pet["name"].isalpha():
+        print(colored("TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
+        pet["name"] = input("What's the name of your " + pet["type"] + "? ")
 
-            ******************************
-            """, 'yellow'
-        ))
+    input("\nHello! I'm " + pet["name"] + ", your new pet!" + "\nPress enter to start. ")
+    print(colored(r"""
 
-        choice = input("Choice: ")
+                 .-.   .-.
+                /   \ /   \ 
+            .-. |    |    | .-.
+           /   \ \  / \  / /   \
+           |   |  '`.-.`'  |   |
+            \_.' .-`   `-. '._/
+              .-'         '-.       *** SMOLIES - PET GAME ***
+             /               \
+             |               |
+              \             /
+               '.___...___.'
 
-        if choice == "0":
-            print("See you next time!")
-            exit()
-        elif choice == "1":
-            my_pet.feed()
-        elif choice == "2":
-            my_pet.talk()
-        elif choice == "3":
-            new_word = input("What would you like me to learn? ")
-            my_pet.teach(new_word)
-        elif choice == "4":
-            my_pet.play()
-        else:
-            print("Sorry, can't do that! Try a different option. ")
+
+         """, 'green'))
+
+# Print menu with options for the player
+def printMenu(menuOptions):
+    optionKeys = list(menuOptions.keys())
+
+    print(colored("\n***INERACT WITH YOUR PET***", 'yellow', attrs=['bold']))
+    print(colored("-------------", 'yellow'))
+    for key in optionKeys:
+        print(colored(key + ":\t" + menuOptions[key]["text"], 'yellow'))
+
+    print(colored("-------------", 'yellow'))
+
+# Play with toys
+def playToys():
+    print(pet["name"] + " really likes to play with the toys!")
+
+# Get new toys
+def getToys():
+    print("Cool! Let's get some new toys for " + pet["name"] + "!")
+    toyOptions = petToys[pet["type"]]
+    
+    # toy number that can be selected from the list of toys
+    toyNumber = -1
+    # get a valid toy for the input
+    while toyNumber < 0 or toyNumber > len(toyOptions) - 1:
+        for i in range(len(toyOptions)):
+            print(str(i) + ": " + toyOptions[i])
+        toyNumber = int(input("Select the number of a toy:"))
+
+    # get the chosen toy option from the list
+    chosenToy = toyOptions[toyNumber]
+    pet["toys"].append(chosenToy)
+    print("Great! You chose " + chosenToy + " for " + pet["name"] + ".")
+
+# Quit the game
+def quitGame():
+    print("Done for today? Thanks for playing!")
+    exit()
+
+# Feeding the pet
+def feedPet():
+    # fixes the issue with negative hunger values
+    newHunger = pet["hunger"] - 20
+    if newHunger < 0:
+        newHunger = 0
+
+    pet["hunger"] = newHunger
+    print("\nYou just gave some food to " + pet["name"] + ". Hunger decreased by 10!")
+
+# print current statistics about the pet
+def printStats():
+    print("\nYour " + pet["type"] + " " + pet["name"] + " is really awesome!")
+    print("At the moment " + pet["name"] + " has: " + str(len(pet["toys"])) + " toys, which are: ")
+    for toy in pet["toys"]:
+        print(toy)
+    print(pet["name"] + "'s hunger is reaching " + str(pet["hunger"]) + ", while the max is 100.")
+    print(pet["name"] + " is " + str(pet["age"]) + " days old.")
+
+# Main game loop
+def main():
+    # create the pet
+    createPet()
+
+    # menu options for interaction with pet in the console
+    menuOptions = {"F": {"function": feedPet, "text": "Give some food to " + pet["name"] },
+        "P": {"function": playToys, "text": "Play with your " + pet["type"] },
+        "T": {"function": getToys, "text": "Get new toys for " + pet["name"] },
+        "Q": {"function": quitGame, "text": "Quit the game for now"} }
+
+    keepPlaying = True
+    while keepPlaying:
+        # print the menu in the console
+        menuChoice = ""
+
+        # get player's input on menu option and validate it
+        while menuChoice not in menuOptions.keys():
+            printMenu(menuOptions)
+            menuChoice = input("\nSooo... what are we going to do? ").upper()
+
+        # quit the game if player types in Q
+        if menuOptions == "Q":
+            keepPlaying = False
+
+        # call the function that correspons to menu option chosen by the player
+        menuOptions[menuChoice]["function"]()
+
+        # increase pet's hunger level
+        pet["hunger"] += 10
+        pet["age"] += 1
+
+        printStats()
+
+        # print an extra line between the menu options
+        print()
 
 
 main()
