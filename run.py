@@ -78,7 +78,7 @@ def time_runs():
     pet["fun"] -= 2
     
     #add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] == 15:
+    if pet["age"] == 16 or pet["hunger"] == 17:
         print()
         print("Your pet was very weak and decided to take a looooong nap...")
         print(colored(r"""
@@ -101,10 +101,10 @@ def play_toys():
     pet["fun"] += joy
 
     if pet["fun"] < 0:
-        pet["fun"] = 0
+        pet["fun"] == 0
         print("I'm so bored...!")
     elif pet["fun"] >= 15:
-        pet["fun"] = 15
+        pet["fun"] == 15
         print("I'm having so much fun!")
 
 
@@ -151,10 +151,10 @@ def feed_pet():
     pet["hunger"] -= meal
 
     if pet["hunger"] < 0:
-        pet["hunger"] = 0
+        pet["hunger"] == 0
         print("My belly is full!")
     elif pet["hunger"] >= 15:
-        pet["hunger"] = 15
+        pet["hunger"] == 15
         print("I'm sooo hungry!")
 
 
