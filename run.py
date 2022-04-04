@@ -41,20 +41,18 @@ def create_pet():
     input("\nHello! I'm " + pet["name"] + ", your new pet!" + "\nPress enter to start. ")
     print(colored(r"""
 
-                 .-.   .-.
-                /   \ /   \
-            .-. |    |    | .-.
-           /   \ \  / \  / /   \
-           |   |  '`.-.`'  |   |
-            \_.' .-`   `-. '._/
-              .-'         '-.       *** SMOLIES - PET GAME ***
-             /               \
-             |               |
-              \             /
-               '.___...___.'
-
+_     /)---(\          /~~~\
+\\   (/ . . \)        /  .. \
+ \\__)-\(*)/         (_,\  |_)
+ \_       (_         /   \@/    /^^^\
+ (___/-(____) _     /      \   / . . \
+              \\   /  `    |   V\ Y /V
+               \\/  \   | _\    / - \
+                \   /__'|| \\_  |    \
+                 \_____)|_).\_).||(__V
 
          """, 'green', attrs=['bold']))
+    print(colored(pyfiglet.figlet_format("Smolies - PET GAME", font = 'small', width = 800), 'cyan', attrs=['bold']))
 
 
 def print_menu(menu_options):
@@ -78,6 +76,20 @@ def time_runs():
     pet["age"] += 1
     pet["hunger"] += 2
     pet["fun"] -= 2
+    
+    #add death option due to the old age or starvation
+    if pet["age"] == 16 or pet["hunger"] == 15:
+        print()
+        print("Your pet was very weak and decided to take a looooong nap...")
+        print(colored(r"""
+
+        ....._____.......
+            /     \/|
+            \o__  /\|
+                \|
+        
+        """, 'red'))
+        exit()
 
 
 def play_toys():
