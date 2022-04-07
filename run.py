@@ -3,7 +3,7 @@ import pyfiglet
 from termcolor import colored
 
 # pet dictionary
-pet = {"name": "", "type": "", "age": 0, "hunger": 5, "fun": 5, "toys": [], "vocab": ["Grrr..."]}
+pet = {"name": "", "type": "", "age": 0, "hunger": 6, "fun": 5, "toys": [], "vocab": ["Grrr..."]}
 
 # pet toys data object
 pet_toys = {"cat": ["cardboard box", "scratcher a.k.a your favorite chair", "laser pointer"], "dog": ["your new pair of shoes", "stick... just a stick", "annoying squeeky toy"],
@@ -68,6 +68,7 @@ def print_menu(menu_options):
 
     print(colored("-------------", 'yellow'))
     print(colored("\n***REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY***", 'yellow', attrs=['bold']))
+    print(colored("\n***BE MINDFUL THAT THE PETS ARE AGING...***", 'yellow', attrs=['bold']))
 
 
 def time_runs():
@@ -79,16 +80,20 @@ def time_runs():
     pet["fun"] -= 2
     
     #add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] == 17:
+    if pet["age"] == 16 or pet["hunger"] > 15:
         print()
         print(colored("Your pet was very weak and decided to take a looooong nap...", 'red', attrs=['bold']))
-        print(colored(r"""
-        ....._____.......
-            /     \/|
-            \X__  /\|
-                \|
+        print(r"""
+            _____  zZzZzZz
+          /~/~   ~\     zZzZz
+         | |       \        zZZzZ
+         \ \        \
+          \ \        \
+         --\ \       .\''
+        --==\ \     ,,i!!i,
+            ''"'',,}{,,
         
-        """, 'red'))
+        """)
         exit()
 
 
@@ -97,10 +102,26 @@ def play_toys():
     Play with toys
     """
     print(colored(pet["name"] + " really likes to play with the toys! Fun increased!", attrs=['bold']))
+    print(r"""
+                   ___  .-.
+                  /   `~'. |
+                  \__/   O`O_
+                   |         D
+                   \    .__U'
+                    |,.,./
+        ,_        _/`'`'`b
+        \ `.__.-'`        \-._
+         |            '.__ `'-;_
+         |            _.:::'-.__)
+          \    ;_..--'/::::://::\
+          |   /  /   |::::://::::|
+          \  \ \__)   \::://::::/
+           \__)        '://::::'
+                         `'-'`` """)
     joy = 3
     pet["fun"] += joy
 
-    if pet["fun"] < 0:
+    if pet["fun"] <= 0:
         pet["fun"] == 0
         print("I'm so bored...!")
     elif pet["fun"] >= 15:
@@ -112,7 +133,14 @@ def get_toys():
     """
     Get new toys
     """
-    print("Cool! Let's get some new toys for " + pet["name"] + "!")
+    print(colored("Cool! Let's get some new toys for " + pet["name"] + "!", attrs=['bold']))
+    print(r"""
+     .-.               .-.
+    (   `-._________.-'   )
+     >=     _______     =<
+    (   ,-'`       `'-,   )
+     `-'               `-'
+    """)
     toy_options = pet_toys[pet["type"]]
 
     # toy number that can be selected from the list of toys
@@ -133,12 +161,20 @@ def quit_game():
     """
     Quit the game
     """
-    print(colored(r"""
-                                                             /)
-                                                    /\___/\ ((
-                                                    \`@_@'/  ))
-                                                    {_:Y:.}_//
-    Done for today? Thanks for playing!   ----------{_}^-'{_}---------    """, 'green', attrs=['bold']))
+    print(r"""
+         _,,_
+       /`    `\
+      / / o o\ \
+      \/\  Y /\/       /\-/\
+       / `'^` \       /o o  \               _
+    , (  \   | \     =\ Y  =/-~~~~~~-,_____/ )
+    |\|\_/   \_/       '^--'          ______/
+    \/'.  \  /'\         \           /
+     \    /=\  /         ||  |---'\  \
+     /____)/____)       (_(__|   ((__|    
+    """)
+    print(colored("Done for today? Thanks for playing!", 'green', attrs=['bold']))
+    print()
     exit()
 
 
@@ -158,11 +194,10 @@ def feed_pet():
     meal = 3
     pet["hunger"] -= meal
 
-    if pet["hunger"] < 0:
+    if pet["hunger"] <= 0:
         pet["hunger"] == 0
         print(colored(pet["name"] + " is full!", attrs=['bold']))
-    elif pet["hunger"] >= 15:
-        pet["hunger"] == 15
+    elif pet["hunger"] >= 10:
         print("I'm sooo hungry!")
 
 
@@ -190,7 +225,7 @@ def print_stats():
     """
     Print current statistics about the pet
     """
-    print("\nYour " + pet["type"] + " " + pet["name"] + " is really awesome!")
+    print("\nYour " + pet["type"] + " " + pet["name"] + " is really cool!")
     print("At the moment " + pet["name"] + " has: " + str(len(pet["toys"])) + " toys, which are: ")
     for toy in pet["toys"]:
         print(toy)
