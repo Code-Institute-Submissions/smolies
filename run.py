@@ -3,7 +3,7 @@ import pyfiglet
 from termcolor import colored
 
 # pet dictionary
-pet = {"name": "", "type": "", "age": 0, "hunger": 6, "fun": 6, "toys": [], "vocab": ["Grrr..."]}
+pet = {"name": "", "type": "", "age": 0, "hunger": 5, "fun": 5, "toys": [], "vocab": ["Grrr..."]}
 
 # pet toys data object
 pet_toys = {"cat": ["cardboard box", "scratcher a.k.a your favorite chair", "laser pointer"], "dog": ["your new pair of shoes", "stick... just a stick", "annoying squeeky toy"],
@@ -68,7 +68,7 @@ def print_menu(menu_options):
 
     print(colored("-------------", 'yellow'))
     print(colored("\n***REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY***", 'yellow', attrs=['bold']))
-    print(colored("\n***BE MINDFUL THAT THE PETS ARE AGING...***", 'yellow', attrs=['bold']))
+    print(colored("\n***BE MINDFUL THAT PETS ARE AGING...***", 'yellow', attrs=['bold']))
 
 
 def time_runs():
@@ -80,7 +80,7 @@ def time_runs():
     pet["fun"] -= 2
     
     #add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] > 18:
+    if pet["age"] == 16 or pet["hunger"] == 17:
         print()
         print(colored("Your pet was very weak and decided to take a looooong nap...", 'red', attrs=['bold']))
         print(r"""
@@ -121,7 +121,7 @@ def play_toys():
     joy = 3
     pet["fun"] += joy
 
-    if pet["fun"] <= 0:
+    if pet["fun"] < 0:
         pet["fun"] == 0
         print("I'm so bored...!")
     elif pet["fun"] >= 15:
@@ -194,10 +194,11 @@ def feed_pet():
     meal = 3
     pet["hunger"] -= meal
 
-    if pet["hunger"] <= 0:
+    if pet["hunger"] < 0:
         pet["hunger"] == 0
         print(colored(pet["name"] + " is full!", attrs=['bold']))
-    elif pet["hunger"] >= 10:
+    elif pet["hunger"] >= 15:
+        pet["hunger"] == 15
         print("I'm sooo hungry!")
 
 
