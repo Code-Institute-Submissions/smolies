@@ -67,6 +67,7 @@ def print_menu(menu_options):
         print(colored(key + ":\t" + menu_options[key]["text"], 'yellow'))
 
     print(colored("-------------", 'yellow'))
+    print(colored("\n***REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY***", 'yellow', attrs=['bold']))
 
 
 def time_runs():
@@ -80,12 +81,11 @@ def time_runs():
     #add death option due to the old age or starvation
     if pet["age"] == 16 or pet["hunger"] == 17:
         print()
-        print("Your pet was very weak and decided to take a looooong nap...")
+        print(colored("Your pet was very weak and decided to take a looooong nap...", 'red', attrs=['bold']))
         print(colored(r"""
-
         ....._____.......
             /     \/|
-            \o__  /\|
+            \X__  /\|
                 \|
         
         """, 'red'))
@@ -96,7 +96,7 @@ def play_toys():
     """
     Play with toys
     """
-    print(pet["name"] + " really likes to play with the toys! Fun increased!")
+    print(colored(pet["name"] + " really likes to play with the toys! Fun increased!", attrs=['bold']))
     joy = 3
     pet["fun"] += joy
 
@@ -126,7 +126,7 @@ def get_toys():
     # get the chosen toy option from the list
     chosen_toy = toy_options[toy_number]
     pet["toys"].append(chosen_toy)
-    print("Great! You chose " + chosen_toy + " for " + pet["name"] + ".")
+    print("Great! You got a " + chosen_toy + " for " + pet["name"] + ".")
 
 
 def quit_game():
@@ -134,11 +134,11 @@ def quit_game():
     Quit the game
     """
     print(colored(r"""
-                                                         /)
-                                                /\___/\ ((
-                                                \`@_@'/  ))
-                                                {_:Y:.}_//
-Done for today? Thanks for playing!   ----------{_}^-'{_}---------    """, 'green', attrs=['bold']))
+                                                             /)
+                                                    /\___/\ ((
+                                                    \`@_@'/  ))
+                                                    {_:Y:.}_//
+    Done for today? Thanks for playing!   ----------{_}^-'{_}---------    """, 'green', attrs=['bold']))
     exit()
 
 
@@ -146,13 +146,21 @@ def feed_pet():
     """
     Feeding the pet
     """
-    print("\nYou just gave some food to " + pet["name"] + ". Hunger decreased!")
+    print(colored("\nYou just gave some food to " + pet["name"] + ". Hunger decreased!", attrs=['bold']))
+    print(r"""
+             (
+              )
+         __..---..__
+     ,-='  /  |  \  `=-.
+    :--..___________..--;
+     \.,_____________,./
+    """)
     meal = 3
     pet["hunger"] -= meal
 
     if pet["hunger"] < 0:
         pet["hunger"] == 0
-        print("My belly is full!")
+        print(colored(pet["name"] + " is full!", attrs=['bold']))
     elif pet["hunger"] >= 15:
         pet["hunger"] == 15
         print("I'm sooo hungry!")
@@ -164,7 +172,9 @@ def teach_words():
     """
     new_word = input("What would you like me to learn? ")
     pet["vocab"].append(new_word)
+    print()
     print("Okaaaay! I think I got it!")
+    print(colored("Now try to talk with me and see if I got it right.", attrs=['bold']))
 
 
 def talk():
