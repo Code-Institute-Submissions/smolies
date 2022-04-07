@@ -3,7 +3,7 @@ import pyfiglet
 from termcolor import colored
 
 # pet dictionary
-pet = {"name": "", "type": "", "age": 0, "hunger": 6, "fun": 5, "toys": [], "vocab": ["Grrr..."]}
+pet = {"name": "", "type": "", "age": 0, "hunger": 6, "fun": 6, "toys": [], "vocab": ["Grrr..."]}
 
 # pet toys data object
 pet_toys = {"cat": ["cardboard box", "scratcher a.k.a your favorite chair", "laser pointer"], "dog": ["your new pair of shoes", "stick... just a stick", "annoying squeeky toy"],
@@ -80,7 +80,7 @@ def time_runs():
     pet["fun"] -= 2
     
     #add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] > 15:
+    if pet["age"] == 16 or pet["hunger"] > 18:
         print()
         print(colored("Your pet was very weak and decided to take a looooong nap...", 'red', attrs=['bold']))
         print(r"""
