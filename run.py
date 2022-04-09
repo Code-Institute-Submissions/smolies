@@ -54,7 +54,7 @@ def create_pet():
         for option in pet_options:
             print(option)
         pet_type = input(
-            "\nI bet you're excited! Which pet did you choose? ").lower()
+            "\nI bet you're excited! Which pet did you choose? \n").lower()
         if pet_type not in pet_options:
             print(
                 colored("Sorry, I don't know this pet! Try again!", 'red'))
@@ -65,14 +65,14 @@ def create_pet():
     # name the pet
     pet["name"] = input(
         "Okay, one more question... What's the name of your "
-        + pet["type"] + "? ")
+        + pet["type"] + "?\n ")
     while not pet["name"].isalpha():
         print(colored(
                 "TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
-        pet["name"] = input("What's the name of your " + pet["type"] + "? ")
+        pet["name"] = input("What's the name of your " + pet["type"] + "? \n")
 
     print("\nHello! I'm " + pet["name"] + ", your new pet!")
-    input("\nPress ENTER to play.")
+    input("\nPress ENTER to play\n.")
     print(colored(r"""
 
 _     /)---(\          /~~~\
@@ -197,7 +197,7 @@ def get_toys():
     while toy_number < 0 or toy_number > len(toy_options) - 1:
         for i in range(len(toy_options)):
             print(str(i) + ": " + toy_options[i])
-        toy_number = int(input("Select the number of a toy:"))
+        toy_number = int(input("Select the number of a toy: \n"))
 
     # get the chosen toy option from the list
     chosen_toy = toy_options[toy_number]
@@ -257,7 +257,7 @@ def teach_words():
     """
     Teaches the pet new words
     """
-    new_word = input("What would you like me to learn? ")
+    new_word = input("What would you like me to learn? \n")
     pet["vocab"].append(new_word)
     print()
     print("Okaaaay! I think I got it!")
@@ -314,7 +314,7 @@ def main():
         # get player's input on menu option and validate it
         while menu_choice not in menu_options.keys():
             print_menu(menu_options)
-            menu_choice = input("\nSooo... what are we going to do? ").upper()
+            menu_choice = input("\nSooo... what are we going to do? \n")
             if menu_choice not in menu_options.keys():
                 print(colored("Sorry, try something different! ", 'red'))
 
