@@ -72,7 +72,7 @@ def create_pet():
 
     print("\nHello! I'm " + pet["name"] + ", your new pet!")
     input("\nPress ENTER to play\n")
-    print(colored(r"""
+    print(r"""
 
 _     /)---(\          /~~~\
 \\   (/ . . \)        /  .. \
@@ -84,7 +84,7 @@ _     /)---(\          /~~~\
                 \   /__'|| \\_  |    \
                  \_____)|_).\_).||(__V
 
-         """, 'green'))
+         """)
     print(colored(
         pyfiglet.figlet_format("Smolies - PET GAME", font='small', width=800),
         'cyan'))
@@ -96,10 +96,10 @@ def print_menu(menu_options):
     """
     option_keys = list(menu_options.keys())
 
-    print(colored("\n***INERACT WITH YOUR PET***", 'yellow', attrs=['bold']))
+    print(colored("\n***INERACT WITH YOUR PET***", 'cyan', attrs=['bold']))
     print(colored("-------------", 'yellow'))
     for key in option_keys:
-        print(colored(key + ":\t" + menu_options[key]["text"], 'yellow'))
+        print(colored(key + ":\t" + menu_options[key]["text"], 'cyan'))
 
     print(colored("-------------", 'yellow'))
     print(colored(
@@ -121,7 +121,7 @@ def time_runs():
         pet["fun"] -= 2
 
     # add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] == 20:
+    if pet["age"] == 16 or pet["hunger"] == 22:
         print()
         print(colored(
             "Your pet was very weak and decided to take a looooong nap...",
@@ -285,7 +285,7 @@ def print_stats():
     print(pet["name"] + "'s hunger is reaching " + str(
         pet["hunger"]) + ", while the max is 20.")
     print(pet["name"] + "'s joy is reaching " + str(
-        pet["fun"]) + "Remember to keep your pet happy!")
+        pet["fun"]) + " Remember to keep your pet happy!")
     print("Your " + pet["type"] + " is " + str(pet["age"]) + " days old.")
 
 
