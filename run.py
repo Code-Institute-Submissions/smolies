@@ -208,10 +208,10 @@ def quit_game():
     Quit the game
     """
     print(r"""
-         _,,_      ( I'll miss you!!!)     (You better come back to give me some food, human!)
+         _,,_      (I'll miss you!)     (You better come back to give me food!)
        /`    `\   O                       O
       / / o o\ \ o                    o
-      \/\  Y /\/           /\-/\  o   
+      \/\  Y /\/           /\-/\  o
        / `'^` \           /o o  \               _
     , (  \   | \         =\ Y  =/-~~~~~~-,_____/ )
     |\|\_/   \_/           '^--'          ______/
