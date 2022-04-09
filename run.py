@@ -3,42 +3,76 @@ import pyfiglet
 from termcolor import colored
 
 # pet dictionary
-pet = {"name": "", "type": "", "age": 0, "hunger": 5, "fun": 5, "toys": [], "vocab": ["Grrr..."]}
+pet = {
+    "name": "",
+    "type": "",
+    "age": 0,
+    "hunger": 5,
+    "fun": 5,
+    "toys": [],
+    "vocab": ["Grrr..."]
+    }
 
 # pet toys data object
-pet_toys = {"cat": ["cardboard box", "scratcher a.k.a your favorite chair", "laser pointer"], "dog": ["your new pair of shoes", "stick... just a stick", "annoying squeeky toy"],
-"hamster": ["rainbow bridge", "climbing ladder", "super fast spinning wheel"], "fish": ["pirate's treasure chest", "undersea cave", "fluorescent non-toxic plants"],
-"bird": ["luxurious bathtub bowl", "wooden playground", "cute swing"]}
+pet_toys = {"cat": [
+                "cardboard box",
+                "scratcher a.k.a your favorite chair",
+                "laser pointer"],
+            "dog": [
+                "your new pair of shoes",
+                "stick... just a stick",
+                "annoying squeeky toy"],
+            "hamster": [
+                "rainbow bridge",
+                "climbing ladder",
+                "super fast spinning wheel"],
+            "fish": [
+                "pirate's treasure chest",
+                "undersea cave",
+                "fluorescent non-toxic plants"],
+            "bird": [
+                "luxurious bathtub bowl",
+                "wooden playground",
+                "cute swing"]
+            }
 
 
 def create_pet():
     """
     Prompt for different options of pet type
     """
-    print(colored(pyfiglet.figlet_format("Smolies - pet game", width = 200,), 'green', attrs=['bold']))
+    print(colored(
+        pyfiglet.figlet_format("Smolies - pet game", width=200,), 'green',
+        ))
     # get the input of what type of pet is this
     pet_type = ""
 
     pet_options = list(pet_toys.keys())
     # validate the input
     while pet_type not in pet_options:
-        print("Hello! In this game you can choose one of the following pets: \n")
+        print("Hi! In this game you can choose one of the following pets: \n")
         for option in pet_options:
             print(option)
-        pet_type = input("\nI bet you're excited! Which pet did you choose? ").lower()
+        pet_type = input(
+            "\nI bet you're excited! Which pet did you choose? ").lower()
         if pet_type not in pet_options:
-            print(colored("Sorry, this animal is not available! Try again!", 'red'))
+            print(
+                colored("Sorry, I don't know this pet! Try again!", 'red'))
 
     # write the pet type into the database
     pet["type"] = pet_type
 
     # name the pet
-    pet["name"] = input("Okay, one more question... What's the name of your " + pet["type"] + "? ")
+    pet["name"] = input(
+        "Okay, one more question... What's the name of your "
+        + pet["type"] + "? ")
     while not pet["name"].isalpha():
-        print(colored("TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
+        print(colored(
+                "TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
         pet["name"] = input("What's the name of your " + pet["type"] + "? ")
 
-    input("\nHello! I'm " + pet["name"] + ", your new pet!" + "\nPress enter to start. ")
+    print("\nHello! I'm " + pet["name"] + ", your new pet!")
+    input("\nPress ENTER to play.")
     print(colored(r"""
 
 _     /)---(\          /~~~\
@@ -52,7 +86,9 @@ _     /)---(\          /~~~\
                  \_____)|_).\_).||(__V
 
          """, 'green', attrs=['bold']))
-    print(colored(pyfiglet.figlet_format("Smolies - PET GAME", font = 'small', width = 800), 'cyan', attrs=['bold']))
+    print(colored(
+        pyfiglet.figlet_format("Smolies - PET GAME", font='small', width=800),
+        'cyan', attrs=['bold']))
 
 
 def print_menu(menu_options):
@@ -67,8 +103,11 @@ def print_menu(menu_options):
         print(colored(key + ":\t" + menu_options[key]["text"], 'yellow'))
 
     print(colored("-------------", 'yellow'))
-    print(colored("\n***REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY***", 'yellow', attrs=['bold']))
-    print(colored("\n***BE MINDFUL THAT PETS ARE AGING...***", 'yellow', attrs=['bold']))
+    print(colored(
+        "\n***REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY***",
+        'yellow', attrs=['bold']))
+    print(colored(
+        "\n***BE MINDFUL THAT PETS ARE AGING...***", 'yellow', attrs=['bold']))
 
 
 def time_runs():
@@ -80,12 +119,14 @@ def time_runs():
     if pet["fun"] <= 0:
         pet["fun"] = 0
     else:
-        pet["fun"] -=2
-    
-    #add death option due to the old age or starvation
+        pet["fun"] -= 2
+
+    # add death option due to the old age or starvation
     if pet["age"] == 16 or pet["hunger"] == 17:
         print()
-        print(colored("Your pet was very weak and decided to take a looooong nap...", 'red', attrs=['bold']))
+        print(colored(
+            "Your pet was very weak and decided to take a looooong nap...",
+            'red', attrs=['bold']))
         print(r"""
             _____  zZzZzZz
           /~/~   ~\     zZzZz
@@ -95,7 +136,7 @@ def time_runs():
          --\ \       .\''
         --==\ \     ,,i!!i,
             ''"'',,}{,,
-        
+
         """)
         exit()
 
@@ -104,7 +145,9 @@ def play_toys():
     """
     Play with toys
     """
-    print(colored(pet["name"] + " really likes to play with the toys! Fun increased!", attrs=['bold']))
+    print(colored(
+        pet["name"] + " really likes to play with the toys! Fun increased!",
+        attrs=['bold']))
     print(r"""
                    ___  .-.
                   /   `~'. |
@@ -136,7 +179,9 @@ def get_toys():
     """
     Get new toys
     """
-    print(colored("Cool! Let's get some new toys for " + pet["name"] + "!", attrs=['bold']))
+    print(colored(
+        "Cool! Let's get some new toys for " + pet["name"] + "!",
+        attrs=['bold']))
     print(r"""
      .-.               .-.
     (   `-._________.-'   )
@@ -174,9 +219,10 @@ def quit_game():
     |\|\_/   \_/       '^--'          ______/
     \/'.  \  /'\         \           /
      \    /=\  /         ||  |---'\  \
-     /____)/____)       (_(__|   ((__|    
+     /____)/____)       (_(__|   ((__|
     """)
-    print(colored("Done for today? Thanks for playing!", 'green', attrs=['bold']))
+    print(colored(
+        "Done for today? Thanks for playing!", 'green', attrs=['bold']))
     print()
     exit()
 
@@ -185,7 +231,9 @@ def feed_pet():
     """
     Feeding the pet
     """
-    print(colored("\nYou just gave some food to " + pet["name"] + ". Hunger decreased!", attrs=['bold']))
+    print(colored(
+        "\nYou just gave some food to " + pet["name"] + ". Hunger decreased!",
+        attrs=['bold']))
     print(r"""
              (
               )
@@ -213,7 +261,8 @@ def teach_words():
     pet["vocab"].append(new_word)
     print()
     print("Okaaaay! I think I got it!")
-    print(colored("Now try to talk with me and see if I got it right.", attrs=['bold']))
+    print(colored(
+        "Now try to talk with me and see if I got it right.", attrs=['bold']))
 
 
 def talk():
@@ -230,12 +279,16 @@ def print_stats():
     Print current statistics about the pet
     """
     print("\nYour " + pet["type"] + " " + pet["name"] + " is really cool!")
-    print("At the moment " + pet["name"] + " has: " + str(len(pet["toys"])) + " toys, which are: ")
+    print("At the moment " + pet["name"] + " has: " + str(
+        len(pet["toys"])) + " toys, which are: ")
     for toy in pet["toys"]:
         print(toy)
-    print(pet["name"] + "'s hunger is reaching " + str(pet["hunger"]) + ", while the max is 15.")
-    print(pet["name"] + "'s joy is reaching " + str(pet["fun"]) + ", while the max is 15.")
+    print(pet["name"] + "'s hunger is reaching " + str(
+        pet["hunger"]) + ", while the max is 15.")
+    print(pet["name"] + "'s joy is reaching " + str(
+        pet["fun"]) + ", while the max is 15.")
     print("Your " + pet["type"] + " is " + str(pet["age"]) + " days old.")
+
 
 def main():
     """
@@ -245,7 +298,8 @@ def main():
     create_pet()
 
     # menu options for interaction with pet in the console
-    menu_options = {"1": {"function": feed_pet, "text": "Give some food to " + pet["name"]},
+    menu_options = {
+        "1": {"function": feed_pet, "text": "Give food to " + pet["name"]},
         "2": {"function": play_toys, "text": "Play with your " + pet["type"]},
         "3": {"function": get_toys, "text": "Get new toys for " + pet["name"]},
         "4": {"function": teach_words, "text": "Teach " + pet["name"] + " some new words"},
