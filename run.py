@@ -85,7 +85,7 @@ def create_pet():
                           \_____)|_).\_).||(__V
          """)
     print(colored(
-        pyfiglet.figlet_format("Smolies - PET GAME", font='small', width=800),
+        pyfiglet.figlet_format("\nSmolies - PET GAME", font='small', width=800),
         'cyan'))
 
 
