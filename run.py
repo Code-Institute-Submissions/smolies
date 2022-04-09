@@ -208,16 +208,16 @@ def quit_game():
     Quit the game
     """
     print(r"""
-         _,,_
-       /`    `\
-      / / o o\ \
-      \/\  Y /\/       /\-/\
-       / `'^` \       /o o  \               _
-    , (  \   | \     =\ Y  =/-~~~~~~-,_____/ )
-    |\|\_/   \_/       '^--'          ______/
-    \/'.  \  /'\         \           /
-     \    /=\  /         ||  |---'\  \
-     /____)/____)       (_(__|   ((__|
+         _,,_      ( I'll miss you!!!)     (You better come back to give me some food, human!)
+       /`    `\   O                       O
+      / / o o\ \ o                    o
+      \/\  Y /\/           /\-/\  o   
+       / `'^` \           /o o  \               _
+    , (  \   | \         =\ Y  =/-~~~~~~-,_____/ )
+    |\|\_/   \_/           '^--'          ______/
+    \/'.  \  /'\            \           /
+     \    /=\  /            ||  |---'\  \
+     /____)/____)          (_(__|   ((__|
     """)
     print(colored(
         "Done for today? Thanks for playing!", 'green', attrs=['bold']))
