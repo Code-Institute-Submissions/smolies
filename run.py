@@ -85,8 +85,8 @@ def create_pet():
                           \_____)|_).\_).||(__V
          """)
     print(colored(
-        pyfiglet.figlet_format("\nSmolies - PET GAME", font='small', width=800),
-        'cyan'))
+        pyfiglet.figlet_format(
+            "\nSmolies - PET GAME", font='small', width=800), 'cyan'))
 
 
 def print_menu(menu_options):
@@ -120,7 +120,7 @@ def time_runs():
         pet["fun"] -= 2
 
     # add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] == 22:
+    if pet["age"] == 20 or pet["hunger"] == 22:
         print()
         print(colored(
             "Your pet was very weak and decided to take a looooong nap...",
