@@ -42,8 +42,7 @@ def create_pet():
     Prompt for different options of pet type
     """
     print(colored(pyfiglet.figlet_format(
-        "Smolies - pet game", width=200,), 'green', attrs=['bold']
-        ))
+        "Smolies - pet game", width=200,), 'green'))
     # get the input of what type of pet is this
     pet_type = ""
 
