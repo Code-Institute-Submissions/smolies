@@ -55,8 +55,8 @@ def create_pet():
         pet_type = input(
             "\nI bet you're excited! Which pet did you choose?\n").lower()
         if pet_type not in pet_options:
-            print(
-                colored("Sorry, I don't know this pet! Try again!", 'red'))
+            print(colored(
+                "Sorry, I don't know this pet type! Try again!", 'red'))
 
     # write the pet type into the database
     pet["type"] = pet_type
@@ -84,10 +84,10 @@ _     /)---(\          /~~~\
                 \   /__'|| \\_  |    \
                  \_____)|_).\_).||(__V
 
-         """, 'green', attrs=['bold']))
+         """, 'green'))
     print(colored(
         pyfiglet.figlet_format("Smolies - PET GAME", font='small', width=800),
-        'cyan', attrs=['bold']))
+        'cyan'))
 
 
 def print_menu(menu_options):
@@ -121,7 +121,7 @@ def time_runs():
         pet["fun"] -= 2
 
     # add death option due to the old age or starvation
-    if pet["age"] == 16 or pet["hunger"] == 17:
+    if pet["age"] == 16 or pet["hunger"] == 20:
         print()
         print(colored(
             "Your pet was very weak and decided to take a looooong nap...",
@@ -283,9 +283,9 @@ def print_stats():
     for toy in pet["toys"]:
         print(toy)
     print(pet["name"] + "'s hunger is reaching " + str(
-        pet["hunger"]) + ", while the max is 15.")
+        pet["hunger"]) + ", while the max is 20.")
     print(pet["name"] + "'s joy is reaching " + str(
-        pet["fun"]) + ", while the max is 15.")
+        pet["fun"]) + "Remember to keep your pet happy!")
     print("Your " + pet["type"] + " is " + str(pet["age"]) + " days old.")
 
 
