@@ -8,12 +8,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
-    <link rel="icon" href="../views/favicon.png" type="image/x-icon">
+    <link rel="icon" href="views/image/favicon.png" type="image/x-icon">
     <title>Smolies - pet game</title>
     <style>
         body {
             font-family: Arial;
-            background-image: url("../views/backgroundKitty.jpg");
+            background-image: url("views/image/backgroundKitty.jpg");
             margin: 0px;
             text-align: center;
         }
@@ -22,6 +22,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        }
+
+        #terminalcontainer {
+        border: solid 8px rgba(0, 206, 209, 0.6);
+        width: 720px;
+        margin: auto auto;
+        padding-right: 10px;
+        text-align: left;
         }
 
         /**
@@ -165,18 +173,10 @@
             text-decoration: underline;
         }
 
-        #terminalcontainer {
-        border: solid 8px rgba(0, 206, 209, 0.6);
-        width: 720px;
-        margin: auto auto;
-        padding-right: 10px;
-        text-align: left;
-        }
-
         button {
             font-family: 'Courier New', Courier, monospace;
             font-weight: 900;
-            font-size: medium;
+            font-size: large;
             width: 200px;
             height: 50px;
             background-color: #02bbbe;
