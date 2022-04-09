@@ -69,10 +69,10 @@ def create_pet():
     while not pet["name"].isalpha():
         print(colored(
                 "TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
-        pet["name"] = input("What's the name of your " + pet["type"] + "? \n")
+        pet["name"] = input("What's the name of your " + pet["type"] + "?\n")
 
     print("\nHello! I'm " + pet["name"] + ", your new pet!")
-    input("\nPress ENTER to play\n.")
+    input("\nPress ENTER to play\n")
     print(colored(r"""
 
 _     /)---(\          /~~~\
