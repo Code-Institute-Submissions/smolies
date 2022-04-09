@@ -74,16 +74,15 @@ def create_pet():
     input("\nPress ENTER to play\n")
     print(r"""
 
-_     /)---(\          /~~~\
-\\   (/ . . \)        /  .. \
- \\__)-\(*)/         (_,\  |_)
- \_       (_         /   \@/    /^^^\
- (___/-(____) _     /      \   / . . \
-              \\   /  `    |   V\ Y /V
-               \\/  \   | _\    / - \
-                \   /__'|| \\_  |    \
-                 \_____)|_).\_).||(__V
-
+        _     /)---(\          /~~~\
+        \\   (/ . . \)        /  .. \
+         \\__)-\(*)/         (_,\  |_)
+          \_       (_         /   \@/    /^^^\
+          (___/-(____) _     /      \   / . . \
+                       \\   /  `    |   V\ Y /V
+                        \\/  \   | _\    / - \
+                         \   /__'|| \\_  |    \
+                          \_____)|_).\_).||(__V
          """)
     print(colored(
         pyfiglet.figlet_format("Smolies - PET GAME", font='small', width=800),
@@ -103,10 +102,10 @@ def print_menu(menu_options):
 
     print(colored("-------------", 'yellow'))
     print(colored(
-        "\n***REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY***",
+        "\n REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY!",
         'yellow', attrs=['bold']))
     print(colored(
-        "\n***BE MINDFUL THAT PETS ARE AGING...***", 'yellow', attrs=['bold']))
+        "\n BE MINDFUL THAT PETS ARE AGING...", 'yellow', attrs=['bold']))
 
 
 def time_runs():
