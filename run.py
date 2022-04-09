@@ -271,6 +271,24 @@ def talk():
     print("I am a " + pet["type"] + ". My name is " + pet["name"] + ".\n")
     print("I know how to say: " + pet["vocab"][randrange(len(pet["vocab"]))])
 
+    if pet["hunger"] >= 20:
+        print()
+        print(colored(
+            "Your pet was very weak and decided to take a looooong nap...",
+            'red', attrs=['bold']))
+        print(r"""
+            _____  zZzZzZz
+          /~/~   ~\     zZzZz
+         | |       \        zZZzZ
+         \ \        \
+          \ \        \
+         --\ \       .\''
+        --==\ \     ,,i!!i,
+            ''"'',,}{,,
+
+        """)
+        exit()
+
 
 def print_stats():
     """
