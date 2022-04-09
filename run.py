@@ -42,7 +42,7 @@ def create_pet():
     Prompt for different options of pet type
     """
     print(colored(pyfiglet.figlet_format(
-        "Smolies - pet game", width=200,), 'green'))
+        "Smolies - pet game", width=200,), 'cyan'))
     # get the input of what type of pet is this
     pet_type = ""
 
@@ -220,7 +220,7 @@ def quit_game():
      /____)/____)          (_(__|   ((__|
     """)
     print(colored(
-        "Done for today? Thanks for playing!", 'green', attrs=['bold']))
+        "Done for today? Thanks for playing!", 'cyan', attrs=['bold']))
     print()
     exit()
 
@@ -255,6 +255,15 @@ def teach_words():
     """
     Teaches the pet new words
     """
+    print(r"""
+              __...--~~~~~-._   _.-~~~~~--...__
+            //               `V'               \\
+           //                 |                 \\
+          //__...--~~~~~~-._  |  _.-~~~~~~--...__\\
+         //__.....----~~~~._\ | /_.~~~~----.....__\\
+        ====================\\|//====================
+                        dwb `---`
+    """)
     new_word = input("What would you like me to learn?\n")
     pet["vocab"].append(new_word)
     print()
@@ -269,6 +278,19 @@ def talk():
     """
     print()
     print("I am a " + pet["type"] + ". My name is " + pet["name"] + ".\n")
+    print(r"""
+     ,`````.          _________
+    ' Hello!`,       /_  ___   \
+    ' Human! `.     /@ \/@  \   \
+     ` , . , '  `.. \__/\___/   /
+                     \_\/______/
+                     /     /\\\\\
+                    |     |\\\\\\
+                     \      \\\\\\
+                      \______/\\\\
+                _______ ||_||_______
+               (______(((_(((______(@)
+    """)
     print("I know how to say: " + pet["vocab"][randrange(len(pet["vocab"]))])
 
     if pet["hunger"] >= 20:
