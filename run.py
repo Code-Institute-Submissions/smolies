@@ -54,7 +54,7 @@ def create_pet():
         for option in pet_options:
             print(option)
         pet_type = input(
-            "\nI bet you're excited! Which pet did you choose? \n").lower()
+            "\nI bet you're excited! Which pet did you choose?\n").lower()
         if pet_type not in pet_options:
             print(
                 colored("Sorry, I don't know this pet! Try again!", 'red'))
@@ -65,7 +65,7 @@ def create_pet():
     # name the pet
     pet["name"] = input(
         "Okay, one more question... What's the name of your "
-        + pet["type"] + "?\n ")
+        + pet["type"] + "?\n")
     while not pet["name"].isalpha():
         print(colored(
                 "TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
@@ -197,7 +197,7 @@ def get_toys():
     while toy_number < 0 or toy_number > len(toy_options) - 1:
         for i in range(len(toy_options)):
             print(str(i) + ": " + toy_options[i])
-        toy_number = int(input("Select the number of a toy: \n"))
+        toy_number = int(input("Select the number of a toy:\n"))
 
     # get the chosen toy option from the list
     chosen_toy = toy_options[toy_number]
@@ -257,7 +257,7 @@ def teach_words():
     """
     Teaches the pet new words
     """
-    new_word = input("What would you like me to learn? \n")
+    new_word = input("What would you like me to learn?\n")
     pet["vocab"].append(new_word)
     print()
     print("Okaaaay! I think I got it!")
@@ -302,7 +302,8 @@ def main():
         "1": {"function": feed_pet, "text": "Give food to " + pet["name"]},
         "2": {"function": play_toys, "text": "Play with your " + pet["type"]},
         "3": {"function": get_toys, "text": "Get new toys for " + pet["name"]},
-        "4": {"function": teach_words, "text": "Teach " + pet["name"] + " some new words"},
+        "4": {"function": teach_words, "text": "Teach " + pet[
+            "name"] + " some new words"},
         "5": {"function": talk, "text": "Talk with your " + pet["type"]},
         "0": {"function": quit_game, "text": "Quit the game for now"}}
 
@@ -314,7 +315,7 @@ def main():
         # get player's input on menu option and validate it
         while menu_choice not in menu_options.keys():
             print_menu(menu_options)
-            menu_choice = input("\nSooo... what are we going to do? \n")
+            menu_choice = input("\nSooo... what are we going to do?\n")
             if menu_choice not in menu_options.keys():
                 print(colored("Sorry, try something different! ", 'red'))
 
