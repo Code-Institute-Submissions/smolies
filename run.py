@@ -73,7 +73,6 @@ def create_pet():
     print("\nHello! I'm " + pet["name"] + ", your new pet!")
     input("\nPress ENTER to play\n")
     print(r"""
-
         _     /)---(\          /~~~\
         \\   (/ . . \)        /  .. \
          \\__)-\(*)/         (_,\  |_)
@@ -82,8 +81,7 @@ def create_pet():
                        \\   /  `    |   V\ Y /V
                         \\/  \   | _\    / - \
                          \   /__'|| \\_  |    \
-                          \_____)|_).\_).||(__V
-         """)
+                          \_____)|_).\_).||(__V """)
     print(colored(
         pyfiglet.figlet_format(
             "\nSmolies - PET GAME", font='small', width=800), 'cyan'))
