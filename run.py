@@ -7,8 +7,8 @@ pet = {
     "name": "",
     "type": "",
     "age": 0,
-    "hunger": 5,
-    "fun": 5,
+    "hunger": 2,
+    "fun": 6,
     "toys": [],
     "vocab": ["Grrr..."]
     }
