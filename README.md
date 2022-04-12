@@ -13,9 +13,9 @@
     * [Strategy and Goals](#strategy-and-goals)
     * [Scope - Features & Future Fearures](#scope-features-&-future-features)
 6. [Testing](#testing)
-    * [**4.1 PEP8**](#pep)
-    * [**4.2 Manual Testing**](#manualTesting)
-    * [**4.3 Function tests**](#functionTest)
+    * [*4.1 PEP8*](#pep)
+    * [*4.2 Manual Testing*](#manualTesting)
+    * [*4.3 Function tests*](#functionTest)
 7. [Bugs and Fixes](#bugs-and-fixes)
 8. [Deployment](#deployment)
 9. [Used technologies and credits](#used-technologies-and-credits)
@@ -25,9 +25,9 @@
     * [Content and credits](#content-and-credits)
 
 # Introduction
-Smolies is a fun, simple text based game created fully in Python.
-It was inspired by popular in the 90s pet games called Tamagotchi, where player was resposible for keeping their virtual pet happy and alive.
-As Smolies is not trying to be a copy of it, it still brings the 90s nostalgia back!
+*Smolies* is a fun, simple text based game created fully in Python.
+It was inspired by popular in the 90s pet games called *Tamagotchi*, where player was resposible for keeping their virtual pet happy and alive.
+As *Smolies* is not trying to be a copy of it, it still brings the 90s nostalgia back!
 
 # UX
 ## Target Audience
@@ -38,14 +38,14 @@ As Smolies is not trying to be a copy of it, it still brings the 90s nostalgia b
 
 ## Strategy and goals
 The main goal was to create a simple, fun game based on Command Line Interface concept (terminal). 
-The game page provides consistent styling, bringing back the memory of popular in 90s Tamagotchi. 
+The game page provides consistent styling, bringing back the memory of popular in 90s *Tamagotchi*. 
 Game's terminal runs without any issues, and prompts users with bolded, colored mesages in response to their inputs. 
 Button on the top of the terminal is clearly visible and allows the user to start/ restart the game at any time. 
 Created code is easy to navigate thanks to numerous docstrings and comments, and allows implementation of future features.
 
 ## Scope - Features & Future Features
-The scope of Smolies - pet game is currently defined by the following features:
-* Functioning terminal based pet style game, inspred by 90s Tamagotchi.
+The scope of *Smolies - pet game* is currently defined by the following features:
+* Functioning terminal based pet style game, inspred by 90s *Tamagotchi*.
 * Visual banners and ASCII art graphics for more pleasant user experience.
 * User can choose 1 of the 5 following types of animals: cat, dog, hamster, fish, bird.
 * User can create a name for their chosen pet.
@@ -71,3 +71,10 @@ Features that are to be considered for future releases:
 * Mood function based on animal level of happiness and hunger - prompting user with messages.
 * Additional game functions - care for animals hygene, sleep, etc.
 
+## Structure
+The structure of *Smolies* on the visual page level has been using gif animation in the background on the right side of the page, and
+the game terminal on the left side. Above the terminal there's a clearly visible button, that allows the player to start/ restart the game.
+It all provides an easy and intuitive access to the game itself and good user experience thanks to minimalistic, bold design. 
+
+On the deeper level the game structure required planning the logic of game's functions flow, in order to provide clear and easy to navigate product.
+Flow chart was used to secure game's natural logic and avoid unnecessary errors.
