@@ -1,4 +1,4 @@
-![SMOLIES](/images/banner.gif)
+![SMOLIES](/images/smolies.gif)
 
 # **Smolies** - classic 90s pet game
 ## *by Katarzyna Zurawska*
