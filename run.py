@@ -263,6 +263,10 @@ def teach_words():
                          `---`
     """)
     new_word = input("What would you like me to learn?\n")
+    while not new_word.isalpha():
+        print(colored(
+                "TRY AGAIN! You can use ONLY letters for words.", 'red'))
+        new_word = input("What would you like me to learn?\n")
     pet["vocab"].append(new_word)
     print()
     print("Okaaaay! I think I got it!")
