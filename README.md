@@ -129,3 +129,13 @@ Pass without any errors.
 * Asked a few additinal people (game testers) to test the game and look for potential bugs.
 
 ## Game functions tests
+* Wrong pet type input test
+![wrong pet type](/images/test1.jpg)
+* Wrong pet name input test 
+![wrong name](/images/test2.jpg)
+* Wrong menu option choice 
+![wrong menu](/images/test3.jpg)
+* Wrong word input type in teaching function
+![wrong word](/images/test4.jpg)
+
+## Bugs and Fixes
