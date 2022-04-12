@@ -13,6 +13,8 @@
     * [Strategy and Goals](#strategy-and-goals)
     * [Scope - Features & Future Fearures](#scope-features-&-future-features)
     * [Structure - Flow Chart](#structure)
+    * [Surface](#surface)
+    * [Game Screenshots](#game-screenshots)
 3. [Testing](#testing)
     * [PEP8](#pep8)
     * [Manual Testing](#manual-testing)
@@ -76,9 +78,35 @@ Features that are to be considered for future releases:
 The structure of *Smolies* on the visual page level has been using gif animation in the background on the right side of the page, and
 the game terminal on the left side. Above the terminal there's a clearly visible button, that allows the player to start/ restart the game.
 It all provides an easy and intuitive access to the game itself and good user experience thanks to minimalistic, bold design. 
-
+![PAGE LOOK](/images/page.png)
 
 On the deeper level the game structure required planning the logic of game's functions flow, in order to provide clear and easy to navigate product.
 Flow chart was used to secure game's natural logic and avoid unnecessary errors.
 ## [CLICK TO VIEW THE FLOW CHART](/images/flowchart.png)
+
+## Surface
+### Colors
+The colors choice selected for the game's page is based on the rule of simplicity and minimalism. 
+The black background is complimented by simple, white gif of a sleeping pet, white frame for the terminal, and cyan colored button. 
+The whole page have a clean look and is easy to navigate. All the colors were intentionally picked to keep the clean design and great elements contrast.
+Terminal prompts are displayed in various colors for pleasant user experience.
+## [COLOR PALETTE](/images/colors.jpg)
+
+### Images and favicon
+* Favicon comes from [this page](https://www.pikpng.com/pngl/m/55-557559_toby-fox-undertale-annoying-dog-transparent-clipart.png)
+* Background gif images comes from [Pixilart page](https://www.pixilart.com/art/annoying-dog-nap-time-4a79686562715e8)
+* Banner for README was created by me on [VistaCreate page](https://create.vista.com/home/)
+* ASCII arts used for the game come from [ASCII ART Archive](https://www.asciiart.eu/)
+
+## Game Screenshots
+Selected screenshots presenting different game options and outputs in the terminal:
+* [Wrong input](/images/invalid-input.jpg)
+* [Main menu](/images/menu.jpg)
+* [Feeding](/images/feeding.jpg)
+* [Playing](/images/playing.jpg)
+* [Getting toys](/images/getting-toys.jpg)
+* [Teaching new words](/images/teaching.jpg)
+* [Talking with the pet](/images/talking.jpg)
+* [Death](/images/dead.jpg)
+* [Quit the game](/images/quit.jpg)
 
