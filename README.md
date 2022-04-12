@@ -162,6 +162,9 @@ able to fix the problem.
 It was enough to remove "==" and add regular "=" in case of integers, as well as add additional if/ else statement for joy in timer.
 ![negative values](/images/negative%20values.jpg)
 
+### **Remaining Bugs**
+No bugs remaining. All KNOWN bugs were fixed before deployment.
+
 # Deployment
 
 ## The steps to deploy via GitHub pages:
@@ -218,4 +221,35 @@ To make a local clone of the project follow these steps:
     - Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
     - Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so. 
 6. Ensure the correct branch is selected "master/Main", and select the deployment method that you desire. In this case, I will be using Automatic Deployment.
+
+# Used Technologies and Credits
+## Languages
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language)
++ a little bit of two below (for getting the heroku page final look):
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+## Media
+* Favicon comes from [this page](https://www.pikpng.com/pngl/m/55-557559_toby-fox-undertale-annoying-dog-transparent-clipart.png)
+* Background gif images comes from [Pixilart page](https://www.pixilart.com/art/annoying-dog-nap-time-4a79686562715e8)
+* Banner for README was created by me on [VistaCreate page](https://create.vista.com/home/)
+* ASCII arts used for the game come from [ASCII ART Archive](https://www.asciiart.eu/)
+
+## Other technologies
+* Flow chart was created online using [Diagrams website](https://app.diagrams.net/)
+* VSCode and Notepad++ were additionally used for rewriting the code, when needed.
+* [GitHub](https://github.com/) provided a repository for the game.
+* [Heroku](https://dashboard.heroku.com/) provided deployment for the game.
+
+## Content and credits
+* GitHub Python Template from [Code Institute](https://codeinstitute.net/ie/)
+* The inspiration for this project came from the 90s nostalgia and my love for old games like *Tamagotchi*.
+* Python pet game functions flow inspiration and guidance came from two absolutely great tutorials:
+    * [YT tutorial from MJ Codes](https://www.youtube.com/watch?v=7m6O9zqZFZ8). This video helped me to understand better the concept of pet game, and Python classes. I dodn't use the code itself, but took an inspiration for some of my own game functions. Huge thank you!
+    * [Gabriel's video How to Make a Pet Simulator](https://junilearning.com/blog/coding-projects/python-pet-simulator/) - absolutely great source, that at the end turned into a base of my pet game. WOnderfully explained dictionaries, function flow, game testing in the process of creating and shown best habits of commenting and docstringing code. Couldn't be more greatful for this resource!
+* [Stack Overflow](https://stackoverflow.com/) helped me in many situations with small and big Python issues. Very grateful for the knowledgeable community of Stack Overflow.
+*  [Code Intitute's Slack](https://slack.com/) CI community provided all necessary help throughout the project development. 
+Huge thank you to all the Slack CI fellow students, especially my MSLETB group, [Elvira](https://github.com/Elvira-94) and Dan for their time and help with code issue no one could solve, my mentor [Chris Quinn](https://github.com/10xOXR), my CI msletb-nov-2021 cohort facilitator [Kasia Bogucka](https://github.com/bezebee), and my boyfriend Dino, who provided great help and supported me even in the most stressful moments of developing this project. Thank you all!!!
+
+
 
