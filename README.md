@@ -12,13 +12,14 @@
     * [Target Audience](#target-audience)
     * [Strategy and Goals](#strategy-and-goals)
     * [Scope - Features & Future Fearures](#scope-features-&-future-features)
-6. [Testing](#testing)
-    * [*4.1 PEP8*](#pep)
-    * [*4.2 Manual Testing*](#manualTesting)
-    * [*4.3 Function tests*](#functionTest)
-7. [Bugs and Fixes](#bugs-and-fixes)
-8. [Deployment](#deployment)
-9. [Used technologies and credits](#used-technologies-and-credits)
+    * [Structure - Flow Chart](#structure)
+3. [Testing](#testing)
+    * [PEP8](#pep8)
+    * [Manual Testing](#manual-testing)
+    * [Function tests](#function-test)
+4. [Bugs and Fixes](#bugs-and-fixes)
+5. [Deployment](#deployment)
+6. [Used technologies and credits](#used-technologies-and-credits)
     * [Used technologies](#used-technologies)
     * [Media](#media)
     * [Other technologies](#other-technologies)
@@ -76,5 +77,8 @@ The structure of *Smolies* on the visual page level has been using gif animation
 the game terminal on the left side. Above the terminal there's a clearly visible button, that allows the player to start/ restart the game.
 It all provides an easy and intuitive access to the game itself and good user experience thanks to minimalistic, bold design. 
 
+
 On the deeper level the game structure required planning the logic of game's functions flow, in order to provide clear and easy to navigate product.
 Flow chart was used to secure game's natural logic and avoid unnecessary errors.
+## [CLICK TO VIEW THE FLOW CHART](/images/flowchart.png)
+
