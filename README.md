@@ -139,3 +139,83 @@ Pass without any errors.
 ![wrong word](/images/test4.jpg)
 
 ## Bugs and Fixes
+### **Fixed Bugs**
+* Infinity loop problem with early menu options at the beginning of process of creating menu. 
+*choice = input* broke the loop:
+![infinity loop](/images/infinity-loop.jpg)
+
+* Removing the @property decorator helped to fix the TypeError and run choice 2:
+![property decorator](/images/property%20decorator.jpg)
+
+* Fixed typos that were breaking the functions.
+In this example - missing colon fixed the issue of main function functionality:
+![typo](/images/typo.jpg)
+
+* Name error fixed - using name of the functions that weren't yet defined
+It was enough to put them temporary as a comment to be able to test the game's functionality of other functions.
+![name error](/images/name-error.jpg)
+
+* Biggest game bug that took a lot of time to fix:
+Values of hunger and fun decreasing to minus values. (Due to user's action and working timer in the backround)
+Reached out for mentor help, tutor support and thanks to the help of group member (Elvira, huge thank you to you and Dan!) - I was
+able to fix the problem.
+It was enough to remove "==" and add regular "=" in case of integers, as well as add additional if/ else statement for joy in timer.
+![negative values](/images/negative%20values.jpg)
+
+# Deployment
+
+## The steps to deploy via GitHub pages:
+1. Log into Github account.
+2. Navigate to the [Repository](https://github.com/katzur/cork-swap).
+3. Click the 'Settings' option at the top of the repository.
+4. Click the 'Pages' option on the left-hand menu, located near the bottom.
+5. Within the 'Source' tab Select the drop-down titled 'None'.
+6. Select the branch named 'main' (in some cases it can be named 'Master').
+7. Click 'Save'.
+8. You will be prompted with a URL to your deployed site.
+9. Site deployed.
+
+When the above steps have been completed, it can sometimes take a moment for the deployed URL to update. It is enough to refresh the page until the site is fully deployed.
+
+## Forking The GitHub Repository
+To use this code and make changes without affecting the original code you can do what is called 'Forking the repository'. By forking this repository you are given a copy of the code at that moment in time that you can use freely. To fork this repository you need to follow the following few steps:
+
+1. Log into your GitHub account.
+2. Navigate to the [Repository](https://github.com/katzur/cork-swap), you are wanting to fork.
+3. In the upper-right of the repository, click the 'Fork' button.
+4. A copy of the Repository will now be available within your repositories.
+
+You will now have a copy of the code available to clone and work on without affecting the original code.
+
+## Cloning the Project.
+To make a local clone of the project follow these steps:
+
+1. Log into your GitHub account.
+2. Navigate to the [Repository](https://github.com/katzur/cork-swap).
+3. In the upper section of the repository click the drop-down named 'Code'.
+4. Copy the SHH address.
+5. Open GitBash
+6. Navigate to the correct directory.
+7. Create a new directory named 'cork-swap'.
+8. CD into 'cork-swap'.
+9. Enter 'git clone SSH_ADDRESS'
+10. GitBash will clone the repository into this directory.
+11. enter 'code .' and this will open VS CODE and happy coding.
+
+## Setting up Heroku App
+
+1. Navigate to "Settings" and scroll down to "build packs".
+2. Click "build packs" and then click both "python" and "node.js"(node.js is needed for the mock terminal.)
+3. Ensure that the python buildpack is above the node.js buildpack, You can click and drag the packs to re-arrange them.
+
+## Heroku App Deployment.
+
+1. Navigate to the "Deploy" section.
+2. Scroll down to "Deployment Method" and select "GitHub".
+3. Authorize the connection of Heroku to GitHub.
+4. Search for your GitHub repository name, and select the correct repository.
+5. For Deployment there are two options, Automatic Deployments or Manual.
+    - Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
+    - Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so. 
+6. Ensure the correct branch is selected "master/Main", and select the deployment method that you desire. In this case, I will be using Automatic Deployment.
+
