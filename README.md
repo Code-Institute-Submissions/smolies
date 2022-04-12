@@ -18,10 +18,10 @@
 3. [Testing](#testing)
     * [PEP8](#pep8)
     * [Manual Testing](#manual-testing)
-    * [Function tests](#function-test)
-4. [Bugs and Fixes](#bugs-and-fixes)
-5. [Deployment](#deployment)
-6. [Used technologies and credits](#used-technologies-and-credits)
+    * [Game functions tests](#game-functions-tests)
+    * [Bugs and Fixes](#bugs-and-fixes)
+4. [Deployment](#deployment)
+5. [Used technologies and credits](#used-technologies-and-credits)
     * [Used technologies](#used-technologies)
     * [Media](#media)
     * [Other technologies](#other-technologies)
@@ -110,3 +110,22 @@ Selected screenshots presenting different game options and outputs in the termin
 * [Death](/images/dead.jpg)
 * [Quit the game](/images/quit.jpg)
 
+# Testing
+## PEP8
+Test using PEP8 validator to avoid conventions errors.
+Pass without any errors.
+![pep8](/images/pep8.jpg)
+
+## Manual Testing
+* Checked for incorrect type of data provided into the terminal. Ensured that the program triggers error messages for the users asking for correct input.
+![Wrong input](/images/invalid-input.jpg)
+* Tested various data input scenarios to ensure that user prompts won't break the game functionality:
+    * entering numbers, spaces, special characters instead of letters, 
+    * entering wrong pet type, making sure that capital/small letters wont break the functionality
+    * entering wrong number type, letters, special characters in menu options to make sure it provides an error message
+    * entering wrong number type, letters, special characters in functions for getting toys to make sure it won't let the user break the functionality
+* I also performed tests when each new function was implemented in the process of game creation (additional print statements, constant terminal checks)
+* Tested program as well in VSCode and regularly pushed deployments through GitHub and Heroku.
+* Asked a few additinal people (game testers) to test the game and look for potential bugs.
+
+## Game functions tests
