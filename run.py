@@ -43,13 +43,16 @@ def create_pet():
     """
     print(colored(pyfiglet.figlet_format(
         "Smolies - pet game", width=200,), 'cyan'))
+    print("\nHi! In this game you can create your own virtual pet! \n")
+    print("\nYou can play with it, feed and teach new things. \n")
+    print("\nLet's get started! \n")
     # get the input of what type of pet is this
     pet_type = ""
 
     pet_options = list(pet_toys.keys())
     # validate the input
     while pet_type not in pet_options:
-        print("Hi! In this game you can choose one of the following pets: \n")
+        print("Type in below, which of thee following pets did you choose: \n")
         for option in pet_options:
             print(option)
         pet_type = input(
@@ -108,7 +111,10 @@ def print_menu(menu_options):
 
 def time_runs():
     """
-    Timer
+    Timer that runs in the background
+    of each player's turn.
+    Decreases pet's fun, and increases
+    pet hunger and age.
     """
     pet["age"] += 1
     pet["hunger"] += 2

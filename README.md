@@ -23,6 +23,7 @@
 4. [Deployment](#deployment)
 5. [Used technologies and credits](#used-technologies-and-credits)
     * [Used technologies](#used-technologies)
+    * [Used Libraries](#used-libraries)
     * [Media](#media)
     * [Other technologies](#other-technologies)
     * [Content and credits](#content-and-credits)
@@ -163,28 +164,20 @@ It was enough to remove "==" and add regular "=" in case of integers, as well as
 ![negative values](/images/negative%20values.jpg)
 
 ### **Remaining Bugs**
-No bugs remaining. All KNOWN bugs were fixed before deployment.
+As much as the issue with negative values was fixed - it happens at times that joy value reaches -1. 
+The game corrects itself in the following turn taken by the player, and turns the value to 0, as intended.
+All the possible solutions to fix fully the issue were undertaken (reached out to my mentor, tutor support and additional help),
+and it seems that the logic blocks the negative values for the hunger properly, but in case of joy this issue seems to be correcting itself with a slight delay.
 
 # Deployment
 
-## The steps to deploy via GitHub pages:
-1. Log into Github account.
-2. Navigate to the [Repository](https://github.com/katzur/cork-swap).
-3. Click the 'Settings' option at the top of the repository.
-4. Click the 'Pages' option on the left-hand menu, located near the bottom.
-5. Within the 'Source' tab Select the drop-down titled 'None'.
-6. Select the branch named 'main' (in some cases it can be named 'Master').
-7. Click 'Save'.
-8. You will be prompted with a URL to your deployed site.
-9. Site deployed.
-
-When the above steps have been completed, it can sometimes take a moment for the deployed URL to update. It is enough to refresh the page until the site is fully deployed.
-
 ## Forking The GitHub Repository
-To use this code and make changes without affecting the original code you can do what is called 'Forking the repository'. By forking this repository you are given a copy of the code at that moment in time that you can use freely. To fork this repository you need to follow the following few steps:
+To use this code and make changes without affecting the original code you can do what is called 'Forking the repository'. 
+By forking this repository you are given a copy of the code at that moment in time that you can use freely. 
+To fork this repository you need to follow the following few steps:
 
-1. Log into your GitHub account.
-2. Navigate to the [Repository](https://github.com/katzur/cork-swap), you are wanting to fork.
+1. Create an account or log into your existing GitHub account.
+2. Navigate to the [Repository](https://github.com/katzur/smolies), you are wanting to fork.
 3. In the upper-right of the repository, click the 'Fork' button.
 4. A copy of the Repository will now be available within your repositories.
 
@@ -194,25 +187,35 @@ You will now have a copy of the code available to clone and work on without affe
 To make a local clone of the project follow these steps:
 
 1. Log into your GitHub account.
-2. Navigate to the [Repository](https://github.com/katzur/cork-swap).
-3. In the upper section of the repository click the drop-down named 'Code'.
-4. Copy the SHH address.
-5. Open GitBash
-6. Navigate to the correct directory.
-7. Create a new directory named 'cork-swap'.
-8. CD into 'cork-swap'.
-9. Enter 'git clone SSH_ADDRESS'
-10. GitBash will clone the repository into this directory.
-11. enter 'code .' and this will open VS CODE and happy coding.
+2. Navigate to the [Repository](https://github.com/katzur/smolies).
+3. In the upper section of the repository click the drop-down option: 'Code'.
+4. Ensure HTTPS is selected and click the clipboard on the right of the URL to copy it.
+5. Open a new workspace in GitPod.
+6. Open GitBash. In the bash terminal type 'git clone [copy url here from step 4]'
+7. Press enter - the IDE will clone and download the repo.
+8. GitBash will clone the repository into this directory.
+9. Optionally type: 'python3 -m http.server' to host the website locally - it won't run the python file, only allow you see how it looks.
+10. If you want to create a web-app from the repo, follow the instructions in "Heroku App Deployment".
 
-## Setting up Heroku App
-
-1. Navigate to "Settings" and scroll down to "build packs".
-2. Click "build packs" and then click both "python" and "node.js"(node.js is needed for the mock terminal.)
-3. Ensure that the python buildpack is above the node.js buildpack, You can click and drag the packs to re-arrange them.
+## GitHub Desktop App
+1. Log in to your GitHub account or create an account.
+2. Navigate to the [Repository](https://github.com/katzur/smolies).
+3. Select the 'Code' button above the file list on the right had side.
+4. Select 'Open with GitHub Desktop'
+5. Install GitHub Desktop Application.
+6. The repo will be copied locally onto your machine.
+7. If you want to create a web-app from the repo please follow the instructions in "Heroku App Deployment"
 
 ## Heroku App Deployment.
-
+1. Create the GitPod repo from the [CI Template](https://github.com/Code-Institute-Org/python-essentials-template) via the GitPod button in GitHub.
+2. Create an account or log into your existing Heroku account.
+3. Click on: NEW in the top right corner and choose create a new app.
+4. Enter a unique name for the Heroku app.
+5. Click on: Create App.
+6. Once the app is built, navigate to "Settings" and scroll down to "Config Vars". 
+7. In the KEY input field enter PORT and in the VALUE input field enter 8000. Click ADD.
+7. Scroll down and click "build packs" and then click both "python" and "node.js"(node.js is needed for the mock terminal.)
+3. Ensure that the python buildpack is above the node.js buildpack. You can click and drag the packs to re-arrange them.
 1. Navigate to the "Deploy" section.
 2. Scroll down to "Deployment Method" and select "GitHub".
 3. Authorize the connection of Heroku to GitHub.
@@ -220,7 +223,7 @@ To make a local clone of the project follow these steps:
 5. For Deployment there are two options, Automatic Deployments or Manual.
     - Automatic Deployment: This will prompt Heroku to re-build your app each time you push your code to GitHub.
     - Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so. 
-6. Ensure the correct branch is selected "master/Main", and select the deployment method that you desire. In this case, I will be using Automatic Deployment.
+6. Ensure the correct branch is selected "master/Main", and select the deployment method that you desire.
 
 # Used Technologies and Credits
 ## Languages
@@ -228,6 +231,11 @@ To make a local clone of the project follow these steps:
 + a little bit of two below (for getting the heroku page final look):
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+## Used Libraries
+Puthon Libraries:
+    * pyfiglet - to use ASCII fonts for game's banner
+    * termcolor - to use colors and styling for fonts
 
 ## Media
 * Favicon comes from [this page](https://www.pikpng.com/pngl/m/55-557559_toby-fox-undertale-annoying-dog-transparent-clipart.png)
