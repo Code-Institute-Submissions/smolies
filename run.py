@@ -44,7 +44,7 @@ def create_pet():
     print(colored(pyfiglet.figlet_format(
         "Smolies - pet game", width=200,), 'cyan'))
     print("\nHi! In this game you can create your own virtual pet! \n")
-    print("\nYou can play with it, feed and teach new things. \n")
+    print("\nFeel free to play with it, feed and teach new things. \n")
     print("\nLet's get started! \n")
     # get the input of what type of pet is this
     pet_type = ""
