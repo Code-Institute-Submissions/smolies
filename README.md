@@ -234,9 +234,9 @@ To make a local clone of the project follow these steps:
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
 
 ## Used Libraries
-Puthon Libraries:
-    * pyfiglet - to use ASCII fonts for game's banner
-    * termcolor - to use colors and styling for fonts
+Python Libraries:
+* *pyfiglet* - to use ASCII fonts for game's banner
+* *termcolor* - to use colors and styling for fonts
 
 ## Media
 * Favicon comes from [this page](https://www.pikpng.com/pngl/m/55-557559_toby-fox-undertale-annoying-dog-transparent-clipart.png)
