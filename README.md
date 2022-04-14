@@ -254,10 +254,10 @@ Python Libraries:
 * GitHub Python Template from [Code Institute](https://codeinstitute.net/ie/)
 * The inspiration for this project came from the 90s nostalgia and my love for old games like *Tamagotchi*.
 * Python pet game functions flow inspiration and guidance came from two absolutely great tutorials:
-    * [YT tutorial from MJ Codes](https://www.youtube.com/watch?v=7m6O9zqZFZ8). This video helped me to understand better the concept of pet game, and Python classes. I dodn't use the code itself, but took an inspiration for some of my own game functions. Huge thank you!
-    * [Gabriel's video How to Make a Pet Simulator](https://junilearning.com/blog/coding-projects/python-pet-simulator/) - absolutely great source, that at the end turned into a base of my pet game. WOnderfully explained dictionaries, function flow, game testing in the process of creating and shown best habits of commenting and docstringing code. Couldn't be more greatful for this resource!
+    * [YT tutorial from MJ Codes](https://www.youtube.com/watch?v=7m6O9zqZFZ8). This video helped me to understand better the concept of pet game, and Python classes. I didn't use the code in it's working shape itself, but took an inspiration for some of my own game functions. Huge thank you!
+    * [Gabriel's video How to Make a Pet Simulator](https://junilearning.com/blog/coding-projects/python-pet-simulator/) - absolutely great source, that at the end turned into a base of my pet game. Wonderfully explained dictionaries, function flow, game testing in the process of creating and shown best habits of commenting and docstringing code. Couldn't be more greatful for this resource!
 * [Stack Overflow](https://stackoverflow.com/) helped me in many situations with small and big Python issues. Very grateful for the knowledgeable community of Stack Overflow.
-*  [Code Intitute's Slack](https://slack.com/) CI community provided all necessary help throughout the project development. 
+* [Code Intitute's Slack](https://slack.com/) CI community provided all necessary help throughout the project development. 
 Huge thank you to all the Slack CI fellow students, especially my MSLETB group, [Elvira](https://github.com/Elvira-94) and Dan for their time and help with code issue no one could solve, my mentor [Chris Quinn](https://github.com/10xOXR), my CI msletb-nov-2021 cohort facilitator [Kasia Bogucka](https://github.com/bezebee), and my boyfriend Dino, who provided great help and supported me even in the most stressful moments of developing this project. Thank you all!!!
 
 
