@@ -195,7 +195,8 @@ To make a local clone of the project follow these steps:
 7. Press enter - the IDE will clone and download the repo.
 8. GitBash will clone the repository into this directory.
 9. Optionally type: 'python3 -m http.server' to host the website locally - it won't run the python file, only allow you see how it looks.
-10. If you want to create a web-app from the repo, follow the instructions in "Heroku App Deployment".
+10. To use the required libraries: type in the console: pip install pyfiglet and pip install termcolor.
+11. To create a web-app from the repo, follow the instructions in "Heroku App Deployment".
 
 ## GitHub Desktop App
 1. Log in to your GitHub account or create an account.
