@@ -44,21 +44,21 @@ def create_pet():
     print(colored(pyfiglet.figlet_format(
         "Smolies - pet game", width=200,), 'cyan'))
     print(colored(
-        "\nHi! In this game you can create your own virtual pet!", 'cyan'))
+        "Hi! In this game you can create your own virtual pet!", 'cyan'))
     print(colored(
-        "\nFeel free to play with it, feed and teach new things.", 'cyan'))
-    print(colored("\nLet's get started!", 'cyan'))
+        "Feel free to play with it, feed it and teach new things.", 'cyan'))
+    print(colored("Are you ready to start...? \n", 'cyan'))
     # get the input of what type of pet is this
     pet_type = ""
 
     pet_options = list(pet_toys.keys())
     # validate the input
     while pet_type not in pet_options:
-        print("Type in below, which of thee following pets did you choose: \n")
+        print("You can choose one of the following pets: \n")
         for option in pet_options:
             print(option)
         pet_type = input(
-            "\nI bet you're excited! Which pet did you choose?\n").lower()
+            "\nI bet you're excited! Type in your choice: \n").lower()
         if pet_type not in pet_options:
             print(colored(
                 "Sorry, I don't know this pet type! Try again!", 'red'))
@@ -75,7 +75,8 @@ def create_pet():
                 "TRY AGAIN! Your pet's name can include ONLY letters.", 'red'))
         pet["name"] = input("What's the name of your " + pet["type"] + "?\n")
 
-    print("\nHello! I'm " + pet["name"] + ", your new pet!")
+    print(colored("\nHello! I'm " + pet[
+        "name"] + ", your new pet!", 'cyan', attrs=['bold']))
     input("\nPress ENTER to play\n")
     print(r"""
         _     /)---(\          /~~~\
@@ -105,10 +106,10 @@ def print_menu(menu_options):
 
     print(colored("-------------", 'yellow'))
     print(colored(
-        "\n REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY!",
+        "\n --> REMEMBER TO FEED YOUR PET AND KEEP IT HAPPY!",
         'yellow', attrs=['bold']))
     print(colored(
-        "\n BE MINDFUL THAT PETS ARE AGING...", 'yellow', attrs=['bold']))
+        "BE MINDFUL THAT PETS ARE AGING...", 'yellow', attrs=['bold']))
 
 
 def time_runs():
@@ -215,8 +216,8 @@ def quit_game():
     """
     print(r"""
          _,,_      (I'll miss you!)     (You better come back to give me food!)
-       /`    `\   O                       O
-      / / o o\ \ o                    o
+       /`    `\   O                       O (Just joking...)
+      / / o o\ \ o                    o         (... or am I?)
       \/\  Y /\/           /\-/\  o
        / `'^` \           /o o  \               _
     , (  \   | \         =\ Y  =/-~~~~~~-,_____/ )
