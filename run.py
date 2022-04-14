@@ -2,6 +2,7 @@ from random import randrange
 import pyfiglet
 from termcolor import colored
 
+
 # pet dictionary
 pet = {
     "name": "",
@@ -40,6 +41,12 @@ pet_toys = {"cat": [
 def create_pet():
     """
     Prompt for different options of pet type
+
+    Main pet game code concept that gave a base for
+    my own game came from:
+    https://junilearning.com/blog/coding-projects/python-pet-simulator/
+    Basic builds of this code were used within run.py document
+    for main functions, implemented by my own code. Thank you to Gabriel!
     """
     print(colored(pyfiglet.figlet_format(
         "Smolies - pet game", width=200,), 'cyan'))
